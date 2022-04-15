@@ -6,6 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
         System.out.println(calc(input));
+        System.out.println("test");
     }
 
     public static String calc(String input) throws Exception {
