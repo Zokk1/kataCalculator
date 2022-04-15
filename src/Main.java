@@ -6,7 +6,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
         System.out.println(calc(input));
-        System.out.println("test");
     }
 
     public static String calc(String input) throws Exception {
@@ -16,6 +15,7 @@ public class Main {
 
         String[] strings = input.split("\\W");
         String[] operator = input.split("\\w");
+        Metods.inputChecker(operator);
         if (strings.length > 2)
             throw new Exception("т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
 
@@ -53,7 +53,7 @@ public class Main {
         }
     }
 
-    private static int calculated(int a, int b, String op) {
+     static int calculated(int a, int b, String op) {
         return switch (op) {
             case "*" -> a * b;
             case "+" -> a + b;
